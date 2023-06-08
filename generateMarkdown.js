@@ -24,19 +24,19 @@ function generateMarkdown(data) {
 `;
 }
 
-function getTitle (){
+function getInfo (){
     inquirer
   .prompt([
     {
-    type: 'Input',
-    message: 'What is your title of the project',
-    name: 'title'    
+        type: 'Input',
+        message: 'What is the title of the project?',
+        name: 'title'    
     },
     {
-    type: 'list',
-                messgae: 'What license do you want to use?',
-                choices: ['none', 'Apache License 2.0', 'GNU General Public License', 'MIT License', 'BSD 2 -Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License', 'Creative Commons Zera v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU Lesser General Public License v2.1', 'Mozzila Public License 2.0', 'The Unlicense'],
-                name: 'License'
+        type: 'list',
+        messgae: 'What license do you want to use?',
+        choices: ['none', 'Apache License 2.0', 'GNU General Public License', 'MIT License', 'BSD 2 -Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License', 'Creative Commons Zera v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU Lesser General Public License v2.1', 'Mozzila Public License 2.0', 'The Unlicense'],
+        name: 'License'
     }
 ])
   .then((answers) => {
@@ -52,7 +52,7 @@ function getTitle (){
   });
 
 }
-getTitle()
+getInfo()
 
 
 module.exports = generateMarkdown;
