@@ -46,6 +46,8 @@ ${data.usage}
 This project is licensed under. <br>
 ${data.license}
 
+${data.license == 'None' ? '' : `(https://opensource.org/license/${data.license}/`}
+
   
 ## Contributing
 ${data.contribution}
