@@ -1,11 +1,11 @@
 
-# Title of Project project 39
+# Title of Project Readme mark down generator
 
-![Apache](https://img.shields.io/badge/license-Apache-green)
+![MIT](https://img.shields.io/badge/license-MIT-green)
 
 
 ## Description
-generate readme file
+This program generates a README.md file
 
 
 
@@ -26,31 +26,30 @@ generate readme file
 ## Installation
 
 To install necessary dependencies, run the following command: <br>
-na
+npm install
 
 
 
 ## Usage
-na
+To generate a Readme.md file
 
 
 ## License
 This project is licensed under. <br>
-Apache
-
-(https://opensource.org/license/Apache/
+MIT
+https://opensource.org/license/MIT/
 
   
 ## Contributing
-B. Engler
+Barry Engler
 
 
 ## Tests
 To run tests, run the following command: <br>
-na
+NA
 
 
 ## Questions
 Please direct any questions to.<br>
-B. Engler at barryengler@gmail.com  <br>
+Barry Engler at barryengler@gmail.com  <br>
 [GitHub](https://github.com/Barry25000)
