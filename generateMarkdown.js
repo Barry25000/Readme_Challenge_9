@@ -1,21 +1,31 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(data, license) {
+    const badges = {
+        none: "",
+        GNU:'[![License: GNU](https://img.shields.io/badge/License-GNUGPLV3-Green.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
+        MIT:'[![license: MIT](https://img.shields.io/badge/License-MIT-Green.svg)](https://opensource.org/license/mit/)',
+        BSD:'[![license: BSD](https://img.shields.io/badge/License-BSD-Green.svg)](https://opensource.org/license/bsd-3-clause/)'
+    }
+    return badges(license);
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # Title 
-  ${data.title}
+# Title of Project ${data.title}
 
+
+${this.renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
@@ -37,7 +47,8 @@ ${data.description}
 
 ## Installation
 
-To install necessary dependencies, run the following command: ${data.instructions}
+To install necessary dependencies, run the following command: <br>
+${data.instructions}
 
 
 
@@ -46,6 +57,7 @@ ${data.usage}
 
 
 ## License
+Licensed under the following licensing. <br>
 ${data.license}
 
   
@@ -54,7 +66,8 @@ ${data.contribution}
 
 
 ## Tests
-To run tests, run the following command: ${data.test}
+To run tests, run the following command: <br>
+${data.test}
 
 
 ## Questions
@@ -65,5 +78,6 @@ GitHub: ${data.gitHub}
 
 
 }
+
 
 module.exports = generateMarkdown;

@@ -14,7 +14,7 @@ function init (){
     {
         type: 'list',
         messgae: 'What license do you want to use?',
-        choices: ['none', 'Apache License 2.0', 'GNU General Public License', 'MIT License', 'BSD 2 -Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License', 'Creative Commons Zera v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Affero General Public License v3.0', 'GNU Lesser General Public License v2.1', 'Mozzila Public License 2.0', 'The Unlicense'],
+        choices: ['none', 'GNU', 'MIT', 'BSD'],
         name: 'license'
     },
     {
@@ -57,32 +57,11 @@ function init (){
   .then((answers) => {  //user feedback
     console.log(answers);
     fs.writeFile('README.md', generateMarkdown(answers), function (err){
-        err ? console.log(err) : console.log('success');
+        err ? console.log(err) : console.log('success! Readme.md file created and saved');
     })
     
   })
-
-
-
-//   .catch((error) => {
-//     if (error.isTtyError) {
-//       // Prompt couldn't be rendered in the current environment
-//     } else {
-//       // Something else went wrong
-//     }
-//   });
-
 }
-
-
-
-
-
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 
 
 // Function call to initialize app
