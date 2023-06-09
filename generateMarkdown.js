@@ -1,15 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(data, license) {
-    const badges = {
-        none: "",
-        GNU:'[![License: GNU](https://img.shields.io/badge/License-GNUGPLV3-Green.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
-        MIT:'[![license: MIT](https://img.shields.io/badge/License-MIT-Green.svg)](https://opensource.org/license/mit/)',
-        BSD:'[![license: BSD](https://img.shields.io/badge/License-BSD-Green.svg)](https://opensource.org/license/bsd-3-clause/)'
-    }
-    return badges(license);
-}
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 // function renderLicenseLink(license) {}
@@ -21,15 +9,17 @@ function renderLicenseBadge(data, license) {
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
+    
   return `
 # Title of Project ${data.title}
 
 
-${this.renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
 
+
+${data.license == 'None' ? '' : `![${data.license}](https://img.shields.io/badge/license-${data.license}-green)`}
 
 ## Table of Contents 
 
@@ -57,7 +47,7 @@ ${data.usage}
 
 
 ## License
-Licensed under the following licensing. <br>
+This project is licensed under. <br>
 ${data.license}
 
   
@@ -72,8 +62,8 @@ ${data.test}
 
 ## Questions
 Please direct any questions to.<br>
-email: ${data.email} <br>
-GitHub: ${data.gitHub}
+${data.contribution} at ${data.email}  <br>
+[GitHub](https://github.com/${data.gitHub})
 `;
 
 

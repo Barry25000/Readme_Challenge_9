@@ -14,7 +14,7 @@ function init (){
     {
         type: 'list',
         messgae: 'What license do you want to use?',
-        choices: ['none', 'GNU', 'MIT', 'BSD'],
+        choices: ['none', 'MIT', 'Apache', 'GPL', 'BSD'],
         name: 'license'
     },
     {
